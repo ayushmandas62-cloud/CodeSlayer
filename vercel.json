@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "codeslayer.html", "use": "@vercel/static" },
+    { "src": "api/chat.mjs", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/chat", "dest": "/api/chat.mjs" },
+    { "src": "/(.*)", "dest": "/codeslayer.html" }
+  ]
+}
